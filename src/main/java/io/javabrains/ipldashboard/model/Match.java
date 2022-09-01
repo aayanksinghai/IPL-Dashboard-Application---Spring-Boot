@@ -1,13 +1,19 @@
 package io.javabrains.ipldashboard.model;
 
+import org.springframework.batch.core.configuration.annotation.EnableBatchProcessing;
+
+import javax.persistence.Entity;
+import javax.persistence.Id;
 import java.time.LocalDate;
 
+@Entity
 public class Match {
 
 //    Only relevant data fields are used here
     // This is the required post processed fields we required in the project
 //    The MatchInput contains all the fields and only required fields will be fetched from the file.
 
+    @Id
     private long id;
     private String city;
     private LocalDate date;
